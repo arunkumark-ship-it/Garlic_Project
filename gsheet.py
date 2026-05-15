@@ -1,3 +1,9 @@
+import sys as _sys, os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+for _p in [_ROOT, _os.path.join(_ROOT,"utils"), _os.path.join(_ROOT,"pages")]:
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+
 """
 utils/gsheet.py  —  All Google Sheets helpers
 Reads credentials.json from project root (local dev).

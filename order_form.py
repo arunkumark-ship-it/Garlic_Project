@@ -1,8 +1,10 @@
-"""pages/sales/order_form.py  —  Sales order entry (T1)"""
-import sys, os as _os
+import sys as _sys, os as _os
 _ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
-if _ROOT not in sys.path:
-    sys.path.insert(0, _ROOT)
+for _p in [_ROOT, _os.path.join(_ROOT,"utils"), _os.path.join(_ROOT,"pages")]:
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+
+"""pages/sales/order_form.py  —  Sales order entry (T1)"""
 import streamlit as st
 from datetime import date, datetime
 from utils.gsheet import (
