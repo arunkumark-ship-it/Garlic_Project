@@ -1,4 +1,8 @@
 """pages/delivery/route_view.py  —  Driver route execution (T2)"""
+import sys, os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 import streamlit as st
 from datetime import date, datetime
 from utils.gsheet import (

@@ -1,4 +1,8 @@
 """pages/admin/admin_dashboard.py  —  Full admin control panel"""
+import sys, os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 import streamlit as st
 import uuid
 from datetime import date, datetime

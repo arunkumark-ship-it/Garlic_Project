@@ -1,4 +1,8 @@
 """pages/login_page.py  —  Login + Register"""
+import sys, os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 import streamlit as st
 from utils.auth import login_user, register_user, gen_uid
 from utils.style import inject

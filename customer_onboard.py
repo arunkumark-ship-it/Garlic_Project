@@ -1,4 +1,8 @@
 """pages/sales/customer_onboard.py  —  Customer onboarding form"""
+import sys, os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 import streamlit as st
 from datetime import date
 from utils.gsheet import append_row, get_customer_by_mobile, load_all_customers
